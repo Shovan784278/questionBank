@@ -7,17 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Chapter extends Model
 {
-    protected $fillable = ['subject_id','title'];
+    protected $fillable = ['title','subject_id','user_id'];
 
     public function subject(){
 
         return $this->belongsTo('Subject::class');
     }
 
-    public function question(){
-
-        return $this->belongsTo('Question::class');
-    }
+//    public function question(){
+//
+//        return $this->belongsTo('Question::class');
+//    }
 
     use HasFactory;
 }

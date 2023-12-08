@@ -9,12 +9,12 @@ class Question extends Model
 {
     protected $fillable = ['subject_id','chapter_id','content','type', 'question_type'];
 
-    public function subjects(){
+    public function subject(){
 
         return $this->belongsTo(Subject::class);
     }
 
-    public function chapters(){
+    public function chapter(){
 
         return $this->belongsTo(Chapter::class);
     }
